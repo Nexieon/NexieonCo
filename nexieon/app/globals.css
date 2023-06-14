@@ -6,13 +6,17 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
+  --primary: #1360f0;
+  --secondary: #0385ff;
+  --primary-text: white;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 25, 25, 25;
+    --background-end-rgb: 25, 25, 25;
   }
 }
 
@@ -24,4 +28,41 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.link-nav-highlighted {
+  background: var(--primary);
+	padding: 1em 1.75em;
+	border-radius: .5em;
+	border: 1px solid transparent;
+	transition: 1s;
+}
+
+.link-nav-highlighted:hover {
+  background: var(--secondary);
+  transition: 0.35s;
+  border: 1px solid white;
+}
+
+
+.hover-underline-animation {
+  position: relative;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-text);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
