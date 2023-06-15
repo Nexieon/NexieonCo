@@ -9,7 +9,6 @@ export default function Home() {
           <h2 className={'text-6xl font-bold p-2'}>Made for your comfort.</h2>
         </div>
       </section>
-      <hr style={{border: '2px solid var(--primary)'}} className='m-3'/>
     </main>
   );
 }
