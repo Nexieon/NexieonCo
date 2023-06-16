@@ -1,4 +1,10 @@
+'use client';
+
+import { useRouter } from "next/navigation";
+
 const About = () => {
+  const router = useRouter();
+
   return (
     <>
       <section className="h-[76vh] bg-black flex md:justify-center items-center p-8 ">
@@ -8,7 +14,7 @@ const About = () => {
       </section>
 
       <article className="bg-white py-20 px-10 lg:px-[12rem]">
-        <h2 className = 'text-black text-3xl mb-7'>Who are we?</h2>
+        <h2 className = 'text-black text-3xl font-bold mb-7'>Who are we?</h2>
 
         <p className = 'text-black '>
           At Nexieon, we are more than just a software agency. We are a team of
@@ -24,16 +30,17 @@ const About = () => {
           drive growth, and shape the future of digital experiences.
         </p>
 
-        <button className = 'px-8 py-5 bg-darkmode-gray rounded-lg mt-12'>View our work</button>
+        <button className = 'px-8 py-5 btn-main mt-12' onClick={() => router.push('/work')}>VIEW OUR WORK</button>
       </article>
 
-      <section className = 'flex lg:flex-row flex-col justify-around lg:px-[10rem] px-[1rem] py-[8rem]'>
+      <section className = 'flex lg:flex-row flex-col justify-between py-20 px-10 lg:px-[12rem]'>
         <div>
-          <h3 className = 'text-3xl mb-8 lg:text-left text-center'>Want to work with us?</h3>
-          <p className = 'lg:text-left text-center'>Join the list of ambitious businesses that take it to the next level.</p>
+          <h3 className = 'text-3xl mb-8 lg:text-left text-left font-bold'>Want to work with us?</h3>
+          <p className = 'lg:text-left text-left'>Join the list of ambitious businesses that take it to the next level.</p>
         </div>
-
-        <button className = ' bg-white text-black my-auto p-4 rounded-lg mx-auto mt-10 lg:mt-0'>CONTACT US</button>
+        <div className="flex align-center">
+          <button className = 'btn-main-reverse my-auto' onClick={() => router.push('/contact')}>CONTACT US</button>
+        </div>
       </section>
     </>
   );

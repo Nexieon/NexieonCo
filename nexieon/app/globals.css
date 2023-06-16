@@ -10,6 +10,7 @@
   --primary: #1360f0;
   --secondary: #0385ff;
   --primary-text: white;
+  --primary-black: rgb(25, 25, 25);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -65,4 +66,50 @@ body {
 .hover-underline-animation:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.btn-main {
+  border-radius: 10px;
+  background: var(--primary-black);
+  border: 2px solid var(--primary-text);
+  color: var(--primary-text);
+
+  padding-left: 2rem/* 32px */;
+  padding-right: 2rem/* 32px */;
+
+  padding-top: 1.25rem/* 20px */;
+  padding-bottom: 1.25rem/* 20px */;
+
+  transition: 0.5s;
+}
+
+.btn-main:hover {
+  background: var(--primary-text);
+  border: 2px solid var(--primary-black);
+  color: var(--primary-black);
+
+  transition: 0.5s;
+}
+
+.btn-main-reverse {
+  border-radius: 10px;
+  background: var(--primary-text);
+  border: 2px solid var(--primary-black);
+  color: var(--primary-black);
+
+  padding-left: 2rem/* 32px */;
+  padding-right: 2rem/* 32px */;
+
+  padding-top: 1.25rem/* 20px */;
+  padding-bottom: 1.25rem/* 20px */;
+
+  transition: 0.5s;
+}
+
+.btn-main-reverse:hover {
+  background: var(--primary-black);
+  border: 2px solid var(--primary-text);
+  color: var(--primary-text);
+
+  transition: 0.5s;
 }
