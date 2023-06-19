@@ -5,20 +5,20 @@ import '../stylesheets/carousel.css'
 
 export const CarouselItem = ({children, width}: any) => {
     return (
-        <div className="carousel-item" style={{width: width}}>
+        <div className="carousel-item h-[200px] lg:h-[450px]" style={{width: width}}>
             {children}
         </div>
     );
 }
-const Carousel = ({ children, length=2000 }: any) => {
+
+const Carousel = ({ children, length=5000 }: any) => {
     let [activeSlide, setActiveSlide] = useState(0);
+    let [timer, setTimer] = useState(0);
+    let timeCount = 0;
     let asCount = 0;
-    let interval: any;
 
     useEffect(() => {
-        interval = !interval && setInterval(() => {
-            console.log('ticking')
-
+        let interval = setInterval(() => {
             setActiveSlide(prv => {
                 asCount = prv + 1;
 
@@ -26,14 +26,26 @@ const Carousel = ({ children, length=2000 }: any) => {
             })
             
             if (asCount >= Children.count(children) - 1) {
-                console.log('stop!')
-
                 setActiveSlide(0)
             }
-            
         }, length);
 
-        return () => clearInterval(interval)
+        let secondInterval = setInterval(() => {
+            setTimer(t => {
+                timeCount = t + 1;
+
+                return t + 1;
+            })
+
+            if (timeCount >= length/10) {
+                setTimer(0);
+            }
+        }, 10)
+
+        return () => {
+            clearInterval(interval)
+            clearInterval(secondInterval);
+        }
     }, []);
 
     return (
@@ -42,6 +54,9 @@ const Carousel = ({ children, length=2000 }: any) => {
             {Children.map(children, slide => {
                 return cloneElement(slide, {width: '100%'});
             })}
+        </div>
+        <div className="w-1/2 mx-auto">
+            <hr className="my-5" style={{borderTop: 'var(--primary) 3px solid', width: `${(timer/(length/10))*100}%`}}/>
         </div>
       </div>
     );

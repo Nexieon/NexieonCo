@@ -114,14 +114,18 @@ body {
   transition: 0.5s;
 }
 
+footer {
+  border-top: 2px solid var(--primary-text);
+}
+
 .fadeInAnim {
-  animation: fadeIn 2s ease-in both;
+  animation: fadeIn 1s ease-in-out;
 }
 
 @keyframes fadeIn {
 	0% {
 		opacity: 0;
-		transform: translate3d(0, -40%, 0);
+		transform: translate3d(0, -50px, 0);
 	}
 	100% {
 		opacity: 1;

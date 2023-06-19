@@ -22,27 +22,27 @@ export default function Home() {
           <CarouselItem>Item 3</CarouselItem>
         </Carousel>
       </section>
-      <article className="bg-white py-24 px-10 lg:px-[12rem]">
-        <div className="w-3/4"> 
-          <h1 className = 'text-black text-4xl font-extrabold mb-7'>Driven by excellence, fueled by passion.</h1>
+      <article className="bg-white py-24 px-10 lg:px-[15%]">
+        <div className="w-full lg:w-3/4 fadeInAnim"> 
+          <h1 className = 'text-black text-2xl lg:text-4xl font-extrabold mb-7'>Driven by excellence, fueled by passion.</h1>
 
-          <p className = 'text-black text-sm mt-12'>
+          <p className = 'text-black mt-12'>
             Nexieon is a software agency focused on delivering what our partners desire, using the greatest technologies and innovations known. 
             With a relentless commitment to quality, we ensure that the ambitious businesses we partner up with recieve the best cutting edge solutions. 
             Acheiving our partner's full potential through technology will always be our main priority.
           </p>
 
-          <button className = 'px-8 py-5 btn-main mt-12' onClick={() => router.push('/work')}>EXPLORE OUR WORK</button>
+          <button className = 'w-full lg:w-auto px-8 py-5 btn-main mt-12' onClick={() => router.push('/work')}>EXPLORE OUR WORK</button>
         </div>
       </article>
 
-      <section className = 'flex lg:flex-row flex-col justify-between py-20 px-10 lg:px-[12rem]'>
-        <div>
-          <h3 className = 'text-3xl mb-8 lg:text-left text-left font-bold'>Want to work with us?</h3>
+      <section className = 'flex lg:flex-row flex-col justify-between py-24 px-10 lg:px-[15%]'>
+        <div className='w-full lg:w-1/2 fadeInAnim'>
+          <h3 className = 'text-3xl mb-8 lg:text-left text-left font-bold lg:text-4xl'>Want to work with us?</h3>
           <p className = 'lg:text-left text-left'>Join the list of ambitious businesses that take it to the next level.</p>
         </div>
-        <div className="flex align-center">
-          <button className = 'btn-main-reverse my-auto' onClick={() => router.push('/contact')}>CONTACT US</button>
+        <div className="w-full mt-8 lg:mt-0 lg:w-1/4 flex align-center fadeInAnim">
+          <button className = 'btn-main-reverse w-full lg:w-auto my-auto' onClick={() => router.push('/contact')}>CONTACT US</button>
         </div>
       </section>
     </main>

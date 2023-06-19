@@ -1,3 +1,4 @@
+import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import './stylesheets/globals.css'
 import { Poppins } from 'next/font/google'
@@ -23,6 +24,8 @@ export default function RootLayout({
         <Navbar />
 
         {children}
+
+        <Footer/>
       </body>
     </html>
   )
