@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import Carousel, { CarouselItem } from './components/Carousel';
 import { useRouter } from 'next/navigation';
 
@@ -17,9 +18,48 @@ export default function Home() {
       <hr style={{borderTop: 'var(--primary) 3px solid'}} className='m-2'/>
       <section className={'h-2/4 min-w-full'}>
         <Carousel>
-          <CarouselItem>Item 1</CarouselItem>
-          <CarouselItem>Item 2</CarouselItem>
-          <CarouselItem>Item 3</CarouselItem>
+          <CarouselItem>
+            <div className="w-1/2 mx-auto md: grid md:grid-cols-2"  onClick={() => window.open('/work#studyai', "_blank")}>
+              <div className='p-3 whitespace-pre-wrap'>
+                <Image src={'/previews/studyailogo.png'} alt='StudyAi Logo' width={150} height={75}/>
+                <p className="text-white mt-3">
+                  Study smarter now with your personal AI study buddy.
+                </p>
+                {/*<button className = 'btn-main-reverse w-full lg:w-auto my-auto' >See More</button>*/}
+              </div>
+              <div className='hidden md:block'>
+                <Image src={'/previews/studyaipreview.png'} alt='StudyAI Preview' width={0} height={0} sizes='100vw' style={{width: '100%', height: 'auto'}}/>
+              </div>
+            </div>
+          </CarouselItem>
+          <CarouselItem>
+            <div className="w-1/2 mx-auto md: grid md:grid-cols-2"  onClick={() => window.open('/work#redlane', "_blank")}>
+              <div className='p-3 whitespace-pre-wrap'>
+                <Image src={'/previews/redlanemedialogo.png'} alt='Redlane Logo' width={300} height={150}/>
+                <p className="text-white mt-3">
+                  Devoted marketing designed in one place to perfect your image.
+                </p>
+                {/*<button className = 'btn-main-reverse w-full lg:w-auto my-auto' >See More</button>*/}
+              </div>
+              <div className='hidden md:block'>
+                <Image src={'/previews/redlanemediapreview.png'} alt='Redlanemedia Preview' width={0} height={0} sizes='100vw' style={{width: '100%', height: 'auto'}}/>
+              </div>
+            </div>
+          </CarouselItem>
+          <CarouselItem>
+            <div className="w-1/2 mx-auto md: grid md:grid-cols-2"  onClick={() => window.open('/work#autoshine', "_blank")}>
+              <div className='p-3 whitespace-pre-wrap'>
+                <Image src={'/previews/autoshinelogo.png'} alt='Autoshine Logo' width={150} height={75}/>
+                <p className="text-white mt-3">
+                  Spend less time cleaning, more time enjoying.
+                </p>
+                {/*<button className = 'btn-main-reverse w-full lg:w-auto my-auto' >See More</button>*/}
+              </div>
+              <div className='hidden md:block'>
+                <Image src={'/previews/autoshinepreview.png'} alt='Autoshine Preview' width={0} height={0} sizes='100vw' style={{width: '100%', height: 'auto'}}/>
+              </div>
+            </div>
+          </CarouselItem>
         </Carousel>
       </section>
       <article className="bg-white py-24 px-10 lg:px-[15%]">
