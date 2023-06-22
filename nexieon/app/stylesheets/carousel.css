@@ -1,0 +1,22 @@
+.carousel {
+    overflow: hidden;
+}
+
+.inner {
+    white-space: nowrap;
+    transition: transform 0.3s;
+}
+
+.carousel-item {
+    display: inline-flex;
+    /*height: 500px;*/
+    justify-content: center;
+    align-items: center;
+    transition: transform .5s;
+}
+
+.carousel-item:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 1s;
+}
