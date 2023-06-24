@@ -49,8 +49,8 @@ export default function Home() {
           <CarouselItem>
             <div className="w-1/2 mx-auto md: grid md:grid-cols-2"  onClick={() => window.open('/work#autoshine', "_blank")}>
               <div className='p-3 whitespace-pre-wrap'>
-                <Image src={'/previews/autoshinelogo.png'} alt='Autoshine Logo' width={150} height={75}/>
-                <p className="text-white mt-3">
+                <Image  src={'/previews/autoshinelogo.png'} alt='Autoshine Logo' width={150} height={75}/>
+                <p className="text-white mt-[-3rem]">
                   Spend less time cleaning, more time enjoying.
                 </p>
                 {/*<button className = 'btn-main-reverse w-full lg:w-auto my-auto' >See More</button>*/}
