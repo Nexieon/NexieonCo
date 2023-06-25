@@ -91,6 +91,29 @@ body {
   transition: 0.5s;
 }
 
+.btn-secondary {
+  border-radius: 10px;
+  background: var(--primary);
+  border: 2px solid var(--primary);
+  color: var(--primary-text);
+
+  padding-left: 2rem/* 32px */;
+  padding-right: 2rem/* 32px */;
+
+  padding-top: 1.25rem/* 20px */;
+  padding-bottom: 1.25rem/* 20px */;
+
+  transition: 0.5s;
+}
+
+.btn-secondary:hover {
+  background: var(--secondary);
+  border: 2px solid var(--primary-text);
+  color: var(--primary-text);
+
+  transition: 0.5s;
+}
+
 .btn-main-reverse {
   border-radius: 10px;
   background: var(--primary-text);
@@ -139,6 +162,23 @@ footer {
 .shadowHover:hover {
   box-shadow: 0px 0px 15px 15px rgba(0,0,0,0.35);
   transition: 0.5s;
+}
+
+input, textarea {
+  padding: 1.25rem;
+  background: transparent;
+  color: var(--primary-text);
+  border-bottom: 2px solid var(--primary-text);
+  width: 100%;
+  border-bottom-right-radius: 5px;
+}
+
+input::placeholder, textarea::placeholder {
+  color: white;
+}
+
+input:focus, textarea:focus {
+  outline: none;
 }
 
 @keyframes fadeIn {
