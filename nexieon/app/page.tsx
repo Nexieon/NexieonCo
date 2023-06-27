@@ -9,7 +9,10 @@ export default function Home() {
 
   return (
     <main>
-      <section className={'flex justify-center items-center min-h-[95vh]'} style={{background: 'url(./circlescatterbg.png)', backgroundPosition: 'center center', backgroundAttachment: 'fixed'}}>
+      <section className={'flex justify-center items-center min-h-[95vh]'} style={{
+        background: 'linear-gradient(180deg, rgba(25,25,25,0.80) 0%, rgba(255,255,255,0) 100%), url(./mountainlake.jpg)', 
+        backgroundPosition: 'center center', backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'
+      }}>
         <div className={'text-center'}>
           <h4 className={'text-xl font-extralight p-2 fadeInAnim'}>Custom software solutions</h4>
           <h2 className={'text-6xl font-bold p-2 fadeInAnim'}>Made for your comfort.</h2>
