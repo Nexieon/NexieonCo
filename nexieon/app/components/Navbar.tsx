@@ -25,7 +25,7 @@ export default function Navbar() {
                         className="hidden mr-2 rounded-sm lg:block"
                     ></Image>
                     <Image
-                        src="/Logo-IconFullColor.png "
+                        src="https://www.nexieon.com/_next/image?url=%2FLogo-IconFullColor.png&w=256&q=75"
                         alt="Nexieon Logo"
                         width={35}
                         height={0}
