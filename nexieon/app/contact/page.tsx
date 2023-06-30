@@ -24,7 +24,7 @@ const Contact = () => {
     console.log(`Data: ${data}`);
     
 
-    const res = await axios.post('/api/messages/send', {...data});
+    const res = await axios.post('api/messages/send', {...data});
     const resData = await res.data;
 
     console.log(`resData: ${resData}`);
