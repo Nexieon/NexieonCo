@@ -1,13 +1,13 @@
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import './stylesheets/globals.css'
-import { Poppins } from 'next/font/google'
+// import { Poppins } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: '300',
-})
+// const poppins = Poppins({
+//   subsets: ['latin'],
+//   weight: '300',
+// })
 
 export const metadata = {
   title: 'Nexieon - Home',
@@ -24,7 +24,7 @@ export default function RootLayout({
       <head>
         <link rel="shortcut icon" href="LogoIconFullColor.ico" type="image/x-icon" />
       </head>
-      <body className={poppins.className}>
+      <body >
         <Navbar />
 
         {children}
