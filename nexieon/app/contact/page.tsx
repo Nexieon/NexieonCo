@@ -40,7 +40,7 @@ const Contact = () => {
 
   return (
     <>
-      <section className="min-h-[95vh] bg-black flex w-full items-center p-8 pt-24"
+      <section className="min-h-[100vh] bg-black flex w-full items-center p-8 pt-24"
             style={{background: 'linear-gradient(142deg, rgba(25,25,25,1) 50%, rgba(36,36,36,1) 50%)'}}
         >
             <div className="mx-auto w-full md:w-3/5 md:flex md:items-center">
@@ -49,7 +49,6 @@ const Contact = () => {
                     <h1 className="text-2xl md:text-6xl mt-7 mb-10 font-semibold fadeInAnim">
                         How can we help?
                     </h1>
-                    <hr className="my-5 fadeInAnim w-full md:w-1/2" style={{borderTop: 'var(--primary) 2px solid'}}/>
                     <p className="font-thin fadeInAnim hidden md:block">
                         Connect with us to help you take that next step in achieving your goals.
                     </p>

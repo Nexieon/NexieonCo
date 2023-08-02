@@ -2,120 +2,152 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-import { FaBars, FaTimes } from 'react-icons/fa'
+import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
-    let [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
+  let [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
 
-    return (
-      <>
-        <div
-          className={`top-0 w-full p-3 lg:p-6 absolute lg:bg-transparent bg-[var(--primary-black)]`}
-          style={{borderBottomLeftRadius: '.5rem', borderBottomRightRadius: '.5rem'}}
-        >
-          <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between xl:mx-auto">
-                <Link href="/" className="flex items-center font-display text-2xl">
-                    <Image
-                        src="/LogoFullColorv2.png"
-                        alt="Nexieon Logo"
-                        width={175}
-                        height={0}
-                        className="hidden mr-2 rounded-sm lg:block"
-                    ></Image>
-                    <Image
-                        src="/LogoIconFullColor.png"
-                        loading="eager"
-                        alt="Nexieon Logo"
-                        width={35}
-                        height={0}
-                        className="mr-2 rounded-sm lg:hidden"
-                    ></Image>
-                </Link>
-                <div className="hidden lg:block" style={{display: 'grid', gridTemplateColumns: "auto auto auto auto", gap: '1.75rem'}}>
-                    <div className="hidden sm:block">
-                        <Link
-                            href={'/'}
-                            className="p-2 text-sm sm:p-4 hover-underline-animation" style={{letterSpacing: '1.2', lineHeight: '1.8'}}
-                        >
-                            Home
-                        </Link>
-                        
-                    </div>
-                    <div className="hidden sm:block">
-                        <Link
-                            href={'/work'}
-                            className="p-2 text-sm sm:p-4 hover-underline-animation" style={{letterSpacing: '1.2', lineHeight: '1.8'}}
-                        >
-                            Work
-                        </Link>
-                    </div>
-                    <div className="hidden sm:block">
-                        <Link
-                            href={'/about'}
-                            className="p-2 text-sm sm:p-4 hover-underline-animation" style={{letterSpacing: '1.2', lineHeight: '1.8'}}
-                        >
-                            About
-                        </Link>
-                    </div>
-                    <div className="hidden sm:block">
-                        <Link
-                            href={'/contact'}
-                            className="p-2 text-sm sm:p-4 link-nav-highlighted" style={{letterSpacing: '1.2', lineHeight: '1.8'}}
-                        >
-                            Contact Us
-                        </Link>
-                    </div>
-                </div>
-                <div className="block md:hidden">
-                    <button className="icon-btn" style={{transition: `transform 0.75s`}} onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}>
-                        {mobileDropdownOpen ? <FaTimes size={'20'}/> : <FaBars size={'20'} />}
-                    </button>
-                </div>
-                <div className={`block md:hidden w-full p-6 absolute bg-[var(--primary-black)] left-0`} 
-                    style={{
-                        transform: `translateY(${mobileDropdownOpen ? `70%` : `-100%`})`,
-                        border: '2px solid var(--primary-text)',
-                        borderRadius: '10px',
-                        transition: `transform 0.75s`
-                    }}
-                >
-                    <div className="w-full mb-nav-item">
-                        <Link
-                            href={'/'}
-                            className="p-2 text-sm sm:p-4 hover-underline-animation" style={{letterSpacing: '1.2', lineHeight: '1.8'}}
-                        >
-                            Home
-                        </Link>
-                    </div>
-                    <div className="w-full mb-nav-item">
-                        <Link
-                            href={'/work'}
-                            className="p-2 text-sm sm:p-4 hover-underline-animation" style={{letterSpacing: '1.2', lineHeight: '1.8'}}
-                        >
-                            Work
-                        </Link>
-                    </div>
-                    <div className="w-full mb-nav-item">
-                        <Link
-                            href={'/about'}
-                            className="p-2 text-sm sm:p-4 hover-underline-animation" style={{letterSpacing: '1.2', lineHeight: '1.8'}}
-                        >
-                            About
-                        </Link>
-                    </div>
-                    <div className="w-full mb-nav-item">
-                    <Link
-                            href={'/contact'}
-                            className="p-2 text-sm sm:p-4 hover-underline-animation" style={{letterSpacing: '1.2', lineHeight: '1.8'}}
-                        >
-                            Contact Us
-                        </Link>
-                    </div>
-                </div>
+  return (
+    <>
+      <div
+        className={`top-0 w-full p-3 lg:p-3 absolute lg:bg-transparent bg-white z-20`}
+      >
+        <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between xl:mx-auto">
+          <Link
+            href="/"
+            className="hidden items-center font-display text-3xl text-white font-semibold lg:flex"
+          >
+            <Image
+              src="/LogoIconFullColor.png"
+              alt="Nexieon Logo"
+              width={35}
+              height={0}
+              className="rounded-sm mr-4"
+            ></Image>
+            Nexieon
+          </Link>
+
+          <Link href="/" className="lg:hidden block">
+            <Image
+              src="/LogoIconFullColor.png"
+              alt="Nexieon Logo"
+              width={35}
+              height={0}
+              className="rounded-sm mr-4"
+            ></Image>
+          </Link>
+
+          <div
+            className="hidden lg:block"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "auto auto auto auto",
+              gap: "1.75rem",
+            }}
+          >
+            <div className="hidden lg:block">
+              <Link
+                href={"/"}
+                className="p-2 text-sm sm:p-4 hover-underline-animation text-white"
+                style={{ letterSpacing: "1.2", lineHeight: "1.8" }}
+              >
+                Home
+              </Link>
+            </div>
+            <div className="hidden lg:block">
+              <Link
+                href={"/work"}
+                className="p-2 text-sm sm:p-4 hover-underline-animation text-white"
+                style={{ letterSpacing: "1.2", lineHeight: "1.8" }}
+              >
+                Work
+              </Link>
+            </div>
+            <div className="hidden lg:block">
+              <Link
+                href={"/about"}
+                className="p-2 text-sm sm:p-4 hover-underline-animation text-white"
+                style={{ letterSpacing: "1.2", lineHeight: "1.8" }}
+              >
+                About
+              </Link>
+            </div>
+
+            <div className="hidden lg:block">
+              <Link
+                href={"/contact"}
+                className="p-2 text-sm sm:px-6 sm:py-3 bg-white text-black rounded font-semibold"
+                style={{ letterSpacing: "1.2", lineHeight: "1.8" }}
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
+          <div className="block lg:hidden">
+            <button
+              className="icon-btn"
+              style={{ transition: `transform 0.75s` }}
+              onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
+            >
+              {mobileDropdownOpen ? (
+                <FaTimes size={"20"} color="black" />
+              ) : (
+                <FaBars size={"20"} color="black" />
+              )}
+            </button>
+          </div>
+          <div
+            className={`block lg:hidden w-full absolute bg-white left-0 h-screen p-4`}
+            style={{
+              transform: `translateY(${mobileDropdownOpen ? `54%` : `-100%`})`,
+              transition: `transform 0.75s`,
+            }}
+          >
+            <div className="w-full mb-nav-item text-2xl">
+              <Link
+                onClick={() => setMobileDropdownOpen(false)}
+                href={"/"}
+                className="p-2 text-sm sm:p-4 hover-underline-animation text-black"
+                style={{ letterSpacing: "1.2", lineHeight: "1.8" }}
+              >
+                Home
+              </Link>
+            </div>
+            <div className="w-full mb-nav-item">
+              <Link
+                onClick={() => setMobileDropdownOpen(false)}
+                href={"/work"}
+                className="p-2 text-sm sm:p-4 hover-underline-animation text-black"
+                style={{ letterSpacing: "1.2", lineHeight: "1.8" }}
+              >
+                Work
+              </Link>
+            </div>
+            <div className="w-full mb-nav-item">
+              <Link
+                onClick={() => setMobileDropdownOpen(false)}
+                href={"/about"}
+                className="p-2 text-sm sm:p-4 hover-underline-animation text-black"
+                style={{ letterSpacing: "1.2", lineHeight: "1.8" }}
+              >
+                About
+              </Link>
+            </div>
+            <div className="w-full mb-nav-item">
+              <Link
+                onClick={() => setMobileDropdownOpen(false)}
+                href={"/contact"}
+                className="p-2 text-sm sm:p-4 hover-underline-animation text-black"
+                style={{ letterSpacing: "1.2", lineHeight: "1.8" }}
+              >
+                Contact Us
+              </Link>
+            </div>
           </div>
         </div>
-      </>
-    );
+      </div>
+    </>
+  );
 }
