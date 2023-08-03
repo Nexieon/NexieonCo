@@ -20,13 +20,12 @@ export default function Navbar() {
             className="hidden items-center font-display text-3xl text-white font-semibold lg:flex"
           >
             <Image
-              src="/LogoIconFullColor.png"
+              src="/LogoFullColorv2.png"
               alt="Nexieon Logo"
-              width={35}
-              height={0}
+              width={200}
+              height={200}
               className="rounded-sm mr-4"
             ></Image>
-            Nexieon
           </Link>
 
           <Link href="/" className="lg:hidden block">

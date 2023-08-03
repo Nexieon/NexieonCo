@@ -10,7 +10,7 @@ const About = () => {
       <section className="h-[76vh] bg-black flex md:justify-center items-center p-8 " 
         style={{
           background: 'linear-gradient(180deg, rgba(25,25,25,0.6) 0%, rgba(255,255,255,0) 100%), url(./manwalking.jpg)', 
-          backgroundPosition: 'center center', backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'
+          backgroundPosition: 'center', backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundRepeat: 'no-repeat'
         }}
       >
         <h1 className="text-4xl md:w-[55%] fadeInAnim">
