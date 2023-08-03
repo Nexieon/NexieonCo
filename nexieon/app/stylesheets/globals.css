@@ -33,7 +33,7 @@ body {
 
 .link-nav-highlighted {
   background: var(--primary);
-	padding: 1em 1.75em;
+  color: white;
 	border-radius: .5em;
 	border: 1px solid transparent;
 	transition: 1s;

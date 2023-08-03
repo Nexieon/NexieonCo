@@ -77,7 +77,7 @@ export default function Navbar() {
             <div className="hidden lg:block">
               <Link
                 href={"/contact"}
-                className="p-2 text-sm sm:px-6 sm:py-3 bg-white text-black rounded font-semibold"
+                className="p-2 text-sm sm:px-6 sm:py-3  font-semibold link-nav-highlighted"
                 style={{ letterSpacing: "1.2", lineHeight: "1.8" }}
               >
                 Contact Us
