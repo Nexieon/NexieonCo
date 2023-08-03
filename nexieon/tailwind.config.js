@@ -15,7 +15,8 @@ module.exports = {
       colors: {
         'darkmode-gray': '#191919',
         'primary-blue': '#1360f0',
-        'secondary-blue': '#0385ff'
+        'secondary-blue': '#0385ff',
+        'lightmode-gray': '#F5F5F7'
       }
     },
   },

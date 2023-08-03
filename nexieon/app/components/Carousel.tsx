@@ -52,7 +52,7 @@ const Carousel = ({ children, length = 5000 }: any) => {
   }, []);
 
   return (
-    <div className="carousel">
+    <div className="carousel ">
       <div
         className="inner"
         style={{ transform: `translateX(-${activeSlide * 100}%)` }}
