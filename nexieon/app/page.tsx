@@ -140,7 +140,7 @@ export default function Home() {
         </CarouselItem>
       </Carousel>
 
-      <section className=" grid md:grid-cols-2 xl:grid-cols-3 gap-8 py-14 mx-auto w-[95%] px-6">
+      <section className=" grid md:grid-cols-2 xl:grid-cols-3 gap-8 py-14 mx-auto w-[90%] px-6">
         <div className="bg-lightmode-gray h-[20rem] rounded-xl flex flex-col justify-center items-center ">
           <svg
             viewBox="0 0 24 24"
