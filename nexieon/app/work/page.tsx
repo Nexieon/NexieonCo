@@ -13,7 +13,7 @@ const Work = () => {
         >
             <div className="mx-auto w-full md:w-3/4">
                 <div>
-                    <h1 className="text-4xl fadeInAnim text-center">
+                    <h1 className="text-4xl fadeInAnim text-center mt-20 lg:mt-0">
                         View and explore our various projects
                     </h1>
                     <hr className="my-5 mx-auto fadeInAnim" style={{borderTop: 'var(--primary) 2px solid', width: '75%'}}/>
