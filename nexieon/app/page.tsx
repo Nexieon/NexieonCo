@@ -16,18 +16,18 @@ export default function Home() {
           autoPlay
           loop
           muted
-          src="./colors1.mp4"
+          src="./roller.mp4"
           className="h-[100vh] w-full object-cover"
         />
 
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
-          <div className={"text-center "}>
+          <div className={"text-center"}>
             <div
               className={
-                "text-6xl md:text-7xl lg:text-8xl font-bold p-2 fadeInAnim"
+                "text-6xl md:text-7xl lg:text-8xl font-bold p-6 fadeInAnim"
               }
             >
-              <h2>Made for your comfort.</h2>
+              <h2>Software for your comfort.</h2>
             </div>
 
             <div className="fadeInAnim mt-14 gap-6 flex justify-center">
