@@ -11,7 +11,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div
+      <nav
         className={`top-0 w-full p-3 lg:p-3 absolute lg:bg-transparent bg-white z-20`}
       >
         <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between xl:mx-auto">
@@ -146,7 +146,7 @@ export default function Navbar() {
             </div>
           </div>
         </div>
-      </div>
+      </nav>
     </>
   );
 }
