@@ -19,3 +19,9 @@ model Message {
   phone     String    @default("(---) --- ----")
   message   String    @default("No message was left.")
 }
+
+model AdminUser {
+  id        String    @id   @default(auto()) @map("_id") @db.ObjectId
+  name      String    @default("---")
+  hash      String    @default("---")
+}

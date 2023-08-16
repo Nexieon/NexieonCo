@@ -3,8 +3,12 @@
 import Swal from "sweetalert2";
 import removeDefaultLayout from "../components/RemoveDefaultLayout";
 import { useEffect } from "react";
+import axios from "axios";
+import { useRouter } from "next/navigation";
 
 const Kabab = () => {
+    const router = useRouter();
+
     useEffect(() => {
         removeDefaultLayout();
     }, []);
@@ -22,8 +26,19 @@ const Kabab = () => {
         if (file) {
             const reader = new FileReader()
 
-            reader.onload = () => {
-                console.log(reader.result)
+            reader.onload = async () => {
+                const data = {
+                    name: file.name,
+                    content: reader.result
+                }
+
+                const res = await axios.post('/api/admin/verify', {...data})
+                const myData = await res.data;
+
+                if (myData.message === 'Success') {
+                    sessionStorage.setItem('admin', "true");
+                    router.replace('/kabab/dashboard');
+                }
             }
 
             reader.readAsText(file);
