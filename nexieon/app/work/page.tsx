@@ -1,22 +1,36 @@
 "use client";
-
+import previewImages from "../../data/previewimgs.json";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Examplebox from "../components/Examplebox";
 import { useState } from "react";
 
+
 const Work = () => {
   const router = useRouter();
   const [onImageViewerEabledFlag, setOnImageViewerEabledFlag] = useState(false);
-  const [transferredSrc, setTransferredSrc] = useState<string>('');
+  const [transferredSrc, setTransferredSrc] = useState<number>(1);
+  const [imageCounter, setImageCounter] = useState(0)
 
   const handleFlagChange = (newFlag: boolean) => {
     setOnImageViewerEabledFlag(newFlag);
   };
 
-  const handleChildPropSrcTransfer = (src: string) => {
-    setTransferredSrc(src);
+  const handleChildPropSrcTransfer = (imageIndex: number) => {
+    setTransferredSrc(imageIndex);
   };
+
+  const decrementShowcaseImage = () => {
+    if (imageCounter > 0) {
+      setImageCounter(imageCounter - 1);
+    }
+  }
+
+  const incrementShowcaseImage = () => {
+    if (previewImages[transferredSrc].length - 1 !== imageCounter) {
+      setImageCounter(imageCounter + 1)
+    }
+  }
 
   return (
     <div className="bg-darkmode-gray">
@@ -24,7 +38,7 @@ const Work = () => {
         className="flex h-[76vh] justify-center items-center flex-col"
         style={{
           background:
-            "linear-gradient(180deg, rgba(25,25,25,0.6) 0%, rgba(255,255,255,0) 100%), url(./city.jpg)",
+            "linear-gradient(180deg, rgba(25,25,25,0.6) 0%, rgba(255,255,255,0) 100%), url(./space.jpg)",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
           backgroundSize: "cover",
@@ -38,40 +52,44 @@ const Work = () => {
           Look through are cataglog of examples.
         </p>
       </div>
-      <section className="flex flex-col lg:grid grid-cols-2 gap-10  px-[1rem] lg:px-[7.5rem] pt-[4rem] lg:pt-[8rem] bg-lightmode-gray">
+      <section className="flex flex-col lg:grid grid-cols-2 gap-10  px-[0.5rem] sm:px-[1rem] lg:px-[7.5rem] pt-[4rem] lg:pt-[8rem] bg-lightmode-gray">
         <Examplebox
-          src="/previews/autoshinehome.png"
+          imgIndex={0}
+          src={'/previews/autoshinehome.png'}
           isLink={false}
           isPictures={true}
           name="autoshine"
           onImageViewerEnabled={handleFlagChange}
-          onSrcTransfer = {handleChildPropSrcTransfer}
+          onSrcTransfer={handleChildPropSrcTransfer}
         />
         <Examplebox
-          src="/previews/redlanemediahome.png"
+          imgIndex={1}
+          src={'/previews/redlanemediahome.png'}
           isLink={true}
           isPictures={true}
           name="redlanemedia"
           link="https://redlanemedia.webflow.io/"
           onImageViewerEnabled={handleFlagChange}
-          onSrcTransfer = {handleChildPropSrcTransfer}
+          onSrcTransfer={handleChildPropSrcTransfer}
         />
         <Examplebox
-          src="/previews/studyaihome.png"
+          imgIndex={2}
+          src={'/previews/studyaihome.png'}
           isLink={false}
           isPictures={true}
           name="studyai"
           onImageViewerEnabled={handleFlagChange}
-          onSrcTransfer = {handleChildPropSrcTransfer}
+          onSrcTransfer={handleChildPropSrcTransfer}
         />
         <Examplebox
-          src="/previews/devwisetoolshome.png"
+          imgIndex={3}
+          src={'/previews/devwisetoolshome.png'}
           isLink={true}
           isPictures={true}
           name="devwisetools"
           link="https://devwisetools.com"
           onImageViewerEnabled={handleFlagChange}
-          onSrcTransfer = {handleChildPropSrcTransfer}
+          onSrcTransfer={handleChildPropSrcTransfer}
         />
 
         <div
@@ -80,8 +98,36 @@ const Work = () => {
             onImageViewerEabledFlag ? { display: "block" } : { display: "none" }
           }
         >
-          <div className="flex justify-end ">
-            <button className="hover:text-zinc-400" onClick={() => setOnImageViewerEabledFlag(false)}>
+          <div className="flex justify-end">
+            <button className = 'hover:text-zinc-400' onClick = {decrementShowcaseImage}>
+              <svg
+                viewBox="0 0 1024 1024"
+                fill="currentColor"
+                height="2em"
+                width="2em"
+              >
+                <path d="M689 165.1L308.2 493.5c-10.9 9.4-10.9 27.5 0 37L689 858.9c14.2 12.2 35 1.2 35-18.5V183.6c0-19.7-20.8-30.7-35-18.5z" />
+              </svg>
+            </button>
+            <button className = 'hover:text-zinc-400' onClick = {incrementShowcaseImage}>
+
+              <svg
+                viewBox="0 0 1024 1024"
+                fill="currentColor"
+                height="2em"
+                width="2em"
+              >
+                <path d="M715.8 493.5L335 165.1c-14.2-12.2-35-1.2-35 18.5v656.8c0 19.7 20.8 30.7 35 18.5l380.8-328.4c10.9-9.4 10.9-27.6 0-37z" />
+              </svg>
+            </button>
+
+            <button
+              className="hover:text-zinc-400 ml-10"
+              onClick={() => {
+                setOnImageViewerEabledFlag(false)
+                setImageCounter(0)
+              }}
+            >
               <svg
                 viewBox="0 0 1024 1024"
                 fill="currentColor"
@@ -95,11 +141,11 @@ const Work = () => {
 
           <div className="flex justify-center items-center h-full ">
             <Image
-              src={transferredSrc}
-              width={500}
-              height={500}
+              src={previewImages[transferredSrc][imageCounter]}
+              width={800}
+              height={800}
               alt="autoshinehome"
-              className="h-auto w-2/3 rounded-xl"
+              className="h-auto w-full sm:w-2/3 rounded-xl"
             />
           </div>
         </div>

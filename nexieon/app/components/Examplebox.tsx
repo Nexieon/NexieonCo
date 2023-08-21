@@ -9,11 +9,12 @@ type Props = {
   isLink: boolean;
   link?: string
   name: string;
+  imgIndex?: number;
   onImageViewerEnabled?: (flag: boolean) => void 
-  onSrcTransfer?: (src: string) => void;
+  onSrcTransfer?: (imgIndex: number) => void;
 };
 
-const Examplebox = ({ src, isPictures, isLink, link, name, onImageViewerEnabled, onSrcTransfer }: Props) => {
+const Examplebox = ({ src, isPictures, isLink, link, name, onImageViewerEnabled, onSrcTransfer, imgIndex }: Props) => {
   const [ImageViewerFlag, setImageViewerFlag] = useState(false)
 
   const handleFlagChange = (newFlag: boolean) => {
@@ -31,7 +32,7 @@ const Examplebox = ({ src, isPictures, isLink, link, name, onImageViewerEnabled,
             width={550}
             height={550}
             alt={name}
-            className="rounded-lg h-[18rem] object-cover w-full  transition-opacity duration-300 group-hover:opacity-40 hover:opacity-100"
+            className="rounded-lg h-[15rem] sm:h-[18rem] object-cover w-full  transition-opacity duration-300 group-hover:opacity-40 hover:opacity-100"
             src={src}
           />
           <div className=" absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity flex-col">
@@ -55,8 +56,8 @@ const Examplebox = ({ src, isPictures, isLink, link, name, onImageViewerEnabled,
               <button
                 onClick = {() => {
                   handleFlagChange(true)
-                  if (onSrcTransfer !== undefined) {
-                    onSrcTransfer(src)
+                  if (onSrcTransfer !== undefined && imgIndex !== undefined) {
+                    onSrcTransfer(imgIndex)
                   }
                 }}
                 className="text-black bg-white p-4 rounded-xl hover:bg-zinc-300 "
@@ -103,8 +104,8 @@ const Examplebox = ({ src, isPictures, isLink, link, name, onImageViewerEnabled,
           style={isPictures ? { display: "block",  } : { display: "none",}}
           onClick = {() => {
             handleFlagChange(true)
-            if (onSrcTransfer !== undefined) {
-              onSrcTransfer(src)
+            if (onSrcTransfer !== undefined && imgIndex !== undefined) {
+              onSrcTransfer(imgIndex)
             }
           }}
         >
