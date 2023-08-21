@@ -55,7 +55,7 @@ const Work = () => {
       <section className="flex flex-col lg:grid grid-cols-2 gap-10  px-[0.5rem] sm:px-[1rem] lg:px-[7.5rem] pt-[4rem] lg:pt-[8rem] bg-lightmode-gray">
         <Examplebox
           imgIndex={0}
-          src={'/previews/autoshinehome.png'}
+          src={'/previews/autoshine/autoshinehome.png'}
           isLink={false}
           isPictures={true}
           name="autoshine"
@@ -64,7 +64,7 @@ const Work = () => {
         />
         <Examplebox
           imgIndex={1}
-          src={'/previews/redlanemediahome.png'}
+          src={'/previews/redlanemedia/redlanemediahome.png'}
           isLink={true}
           isPictures={true}
           name="redlanemedia"
@@ -83,7 +83,7 @@ const Work = () => {
         />
         <Examplebox
           imgIndex={3}
-          src={'/previews/devwisetoolshome.png'}
+          src={'/previews/devwisetools/devwisetoolshome.png'}
           isLink={true}
           isPictures={true}
           name="devwisetools"
