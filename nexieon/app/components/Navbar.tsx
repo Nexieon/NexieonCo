@@ -61,7 +61,7 @@ export default function Navbar() {
                 className="p-2 text-sm sm:p-4 hover-underline-animation text-white"
                 style={{ letterSpacing: "1.2", lineHeight: "1.8" }}
               >
-                Work
+                Examples
               </Link>
             </div>
             <div className="hidden lg:block">
@@ -121,7 +121,7 @@ export default function Navbar() {
                 className="p-2 text-sm sm:p-4 hover-underline-animation text-black"
                 style={{ letterSpacing: "1.2", lineHeight: "1.8" }}
               >
-                Work
+                Examples
               </Link>
             </div>
             <div className="w-full mb-nav-item">
