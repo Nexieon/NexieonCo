@@ -87,7 +87,7 @@ export default function Home() {
           >
             <div className="p-3 whitespace-pre-wrap">
               <Image
-                src={"/previews/redlanemedialogo.png"}
+                src={"/previews/redlanemedia/redlanemedialogo.png"}
                 alt="Redlane Logo"
                 width={300}
                 height={150}
@@ -98,7 +98,7 @@ export default function Home() {
             </div>
             <div className="hidden md:block">
               <Image
-                src={"/previews/redlanemediapreview.png"}
+                src={"/previews/redlanemedia/redlanemediapreview.png"}
                 alt="Redlanemedia Preview"
                 width={0}
                 height={0}
@@ -115,7 +115,7 @@ export default function Home() {
           >
             <div className="p-3 whitespace-pre-wrap">
               <Image
-                src={"/previews/autoshinelogo.png"}
+                src={"/previews/autoshine/autoshinelogo.png"}
                 alt="Autoshine Logo"
                 width={150}
                 height={75}
@@ -127,7 +127,7 @@ export default function Home() {
             </div>
             <div className="hidden md:block">
               <Image
-                src={"/previews/autoshinepreview.png"}
+                src={"/previews/autoshine/autoshinepreview.png"}
                 alt="Autoshine Preview"
                 width={0}
                 height={0}
