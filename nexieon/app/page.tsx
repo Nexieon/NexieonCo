@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <main>
-      <div className="relative ">
+      <div className="relative">
         <video
           playsInline
           autoPlay
@@ -58,7 +58,7 @@ export default function Home() {
           >
             <div className="p-3 whitespace-pre-wrap">
               <Image
-                src={"/previews/studyailogo.png"}
+                src={"/previews/studyai/studyailogo.png"}
                 alt="StudyAi Logo"
                 width={150}
                 height={75}
@@ -66,11 +66,10 @@ export default function Home() {
               <p className="text-white mt-3">
                 Study smarter now with your personal AI study buddy.
               </p>
-              {/*<button className = 'btn-main-reverse w-full lg:w-auto my-auto' >See More</button>*/}
             </div>
             <div className="hidden md:block">
               <Image
-                src={"/previews/studyaipreview.png"}
+                src={"/previews/studyai/studyaipreview.png"}
                 alt="StudyAI Preview"
                 width={0}
                 height={0}
@@ -113,17 +112,16 @@ export default function Home() {
             className="w-1/2 mx-auto md: grid md:grid-cols-2"
             onClick={() => window.open("/work#autoshine", "_blank")}
           >
-            <div className="p-3 whitespace-pre-wrap">
+            <div className="p-3 whitespace-pre-wrap flex flex-col">
               <Image
                 src={"/previews/autoshine/autoshinelogo.png"}
                 alt="Autoshine Logo"
                 width={150}
                 height={75}
               />
-              <p className="text-white mt-[-3rem]">
+              <p className="text-white">
                 Spend less time cleaning, more time enjoying.
               </p>
-              {/*<button className = 'btn-main-reverse w-full lg:w-auto my-auto' >See More</button>*/}
             </div>
             <div className="hidden md:block">
               <Image
@@ -151,7 +149,9 @@ export default function Home() {
             >
               <path d="M21.809 5.524L12.806.179l-.013-.007.078-.045h-.166a1.282 1.282 0 00-1.196.043l-.699.403-8.604 4.954a1.285 1.285 0 00-.644 1.113v10.718c0 .46.245.884.644 1.113l9.304 5.357c.402.232.898.228 1.297-.009l9.002-5.345c.39-.231.629-.651.629-1.105V6.628c0-.453-.239-.873-.629-1.104zm-19.282.559L11.843.719a.642.642 0 01.636.012l9.002 5.345a.638.638 0 01.207.203l-4.543 2.555-4.498-2.7a.963.963 0 00-.968-.014L6.83 8.848 2.287 6.329a.644.644 0 01.24-.246zm14.13 8.293l-4.496-2.492V6.641a.32.32 0 01.155.045l4.341 2.605v5.085zm-4.763-1.906l4.692 2.601-4.431 2.659-4.648-2.615a.317.317 0 01-.115-.112l4.502-2.533zm-.064 10.802l-9.304-5.357a.643.643 0 01-.322-.557V7.018L6.7 9.51v5.324c0 .348.188.669.491.84l4.811 2.706.157.088v4.887a.637.637 0 01-.329-.083z" />
             </svg>
-            <h2 className="text-darkmode-gray text-3xl font-bold ">Fully Custom</h2>
+            <h2 className="text-darkmode-gray text-3xl font-bold ">
+              Fully Custom
+            </h2>
             <p className="text-center mx-10 mt-5 text-black">
               Tailored solutions, covering backend development to frontend
               design, empowering you to truly make it your own.
@@ -225,7 +225,9 @@ export default function Home() {
               <path d="M4 4 H20 A1 1 0 0 1 21 5 V15 A1 1 0 0 1 20 16 H4 A1 1 0 0 1 3 15 V5 A1 1 0 0 1 4 4 z" />
               <path d="M7 20h10M9 16v4M15 16v4M9 12V8M12 12v-1M15 12v-2M12 12v-1" />
             </svg>
-            <h2 className="text-darkmode-gray text-3xl font-bold ">Analytics</h2>
+            <h2 className="text-darkmode-gray text-3xl font-bold ">
+              Analytics
+            </h2>
             <p className="text-center mx-10 mt-5 text-black">
               Track analytics, optimize web performance with our advanced tools
               and expertise for peak digital efficiency.
@@ -259,7 +261,9 @@ export default function Home() {
             >
               <path d="M315.4 15.5C309.7 5.9 299.2 0 288 0s-21.7 5.9-27.4 15.5l-96 160c-5.9 9.9-6.1 22.2-.4 32.2s16.3 16.2 27.8 16.2h192c11.5 0 22.2-6.2 27.8-16.2s5.5-22.3-.4-32.2l-96-160zM288 312v144c0 22.1 17.9 40 40 40h144c22.1 0 40-17.9 40-40V312c0-22.1-17.9-40-40-40H328c-22.1 0-40 17.9-40 40zM128 512c70.7 0 128-57.3 128-128s-57.3-128-128-128S0 313.3 0 384s57.3 128 128 128z" />
             </svg>
-            <h2 className="text-darkmode-gray text-3xl font-bold">Modern Design</h2>
+            <h2 className="text-darkmode-gray text-3xl font-bold">
+              Modern Design
+            </h2>
             <p className="text-center mx-10 mt-5 text-black">
               Modern design practices for a contemporary online presence and
               exceptional user experience.

@@ -5,32 +5,31 @@ import { useRouter } from "next/navigation";
 import Examplebox from "../components/Examplebox";
 import { useState } from "react";
 
-
 const Work = () => {
   const router = useRouter();
   const [onImageViewerEabledFlag, setOnImageViewerEabledFlag] = useState(false);
-  const [transferredSrc, setTransferredSrc] = useState<number>(1);
-  const [imageCounter, setImageCounter] = useState(0)
+  const [transferredIndex, setTransferredIndex] = useState<number>(1);
+  const [imageCounter, setImageCounter] = useState(0);
 
   const handleFlagChange = (newFlag: boolean) => {
     setOnImageViewerEabledFlag(newFlag);
   };
 
   const handleChildPropSrcTransfer = (imageIndex: number) => {
-    setTransferredSrc(imageIndex);
+    setTransferredIndex(imageIndex);
   };
 
   const decrementShowcaseImage = () => {
     if (imageCounter > 0) {
       setImageCounter(imageCounter - 1);
     }
-  }
+  };
 
   const incrementShowcaseImage = () => {
-    if (previewImages[transferredSrc].length - 1 !== imageCounter) {
-      setImageCounter(imageCounter + 1)
+    if (previewImages[transferredIndex].length - 1 !== imageCounter) {
+      setImageCounter(imageCounter + 1);
     }
-  }
+  };
 
   return (
     <div className="bg-darkmode-gray">
@@ -43,6 +42,7 @@ const Work = () => {
           backgroundAttachment: "fixed",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
+          objectFit: "cover",
         }}
       >
         <h2 className="md:w-[55%] fadeInAnim text-5xl font-semibold">
@@ -55,7 +55,7 @@ const Work = () => {
       <section className="flex flex-col lg:grid grid-cols-2 gap-10  px-[0.5rem] sm:px-[1rem] lg:px-[7.5rem] pt-[4rem] lg:pt-[8rem] bg-lightmode-gray">
         <Examplebox
           imgIndex={0}
-          src={'/previews/autoshine/autoshinehome.png'}
+          src={"/previews/autoshine/autoshinehome.png"}
           isLink={false}
           isPictures={true}
           name="autoshine"
@@ -64,7 +64,7 @@ const Work = () => {
         />
         <Examplebox
           imgIndex={1}
-          src={'/previews/redlanemedia/redlanemediahome.png'}
+          src={"/previews/redlanemedia/redlanemediahome.png"}
           isLink={true}
           isPictures={true}
           name="redlanemedia"
@@ -74,7 +74,7 @@ const Work = () => {
         />
         <Examplebox
           imgIndex={2}
-          src={'/previews/studyaihome.png'}
+          src={"/previews/studyai/studyaihome.png"}
           isLink={false}
           isPictures={true}
           name="studyai"
@@ -83,7 +83,7 @@ const Work = () => {
         />
         <Examplebox
           imgIndex={3}
-          src={'/previews/devwisetools/devwisetoolshome.png'}
+          src={"/previews/devwisetools/devwisetoolshome.png"}
           isLink={true}
           isPictures={true}
           name="devwisetools"
@@ -98,8 +98,11 @@ const Work = () => {
             onImageViewerEabledFlag ? { display: "block" } : { display: "none" }
           }
         >
-          <div className="flex justify-end">
-            <button className = 'hover:text-zinc-400' onClick = {decrementShowcaseImage}>
+          <div className="flex justify-center md:justify-end">
+            <button
+              className="hover:text-zinc-400"
+              onClick={decrementShowcaseImage}
+            >
               <svg
                 viewBox="0 0 1024 1024"
                 fill="currentColor"
@@ -109,8 +112,10 @@ const Work = () => {
                 <path d="M689 165.1L308.2 493.5c-10.9 9.4-10.9 27.5 0 37L689 858.9c14.2 12.2 35 1.2 35-18.5V183.6c0-19.7-20.8-30.7-35-18.5z" />
               </svg>
             </button>
-            <button className = 'hover:text-zinc-400' onClick = {incrementShowcaseImage}>
-
+            <button
+              className="hover:text-zinc-400"
+              onClick={incrementShowcaseImage}
+            >
               <svg
                 viewBox="0 0 1024 1024"
                 fill="currentColor"
@@ -122,10 +127,10 @@ const Work = () => {
             </button>
 
             <button
-              className="hover:text-zinc-400 ml-10"
+              className="hover:text-zinc-400 ml-5"
               onClick={() => {
-                setOnImageViewerEabledFlag(false)
-                setImageCounter(0)
+                setOnImageViewerEabledFlag(false);
+                setImageCounter(0);
               }}
             >
               <svg
@@ -139,9 +144,9 @@ const Work = () => {
             </button>
           </div>
 
-          <div className="flex justify-center items-center h-full ">
+          <div className="flex justify-center items-center h-[90vh] flex-col ">
             <Image
-              src={previewImages[transferredSrc][imageCounter]}
+              src={previewImages[transferredIndex][imageCounter]}
               width={800}
               height={800}
               alt="autoshinehome"
