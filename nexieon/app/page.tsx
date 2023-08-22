@@ -284,7 +284,7 @@ export default function Home() {
               Owner dashboard
             </h2>
             <p className="text-center mx-10 mt-5 text-black">
-              Custom owner's dashboard for effortless site updates and tracking.
+              Custom owner's dashboard for effortless site updates, tracking, and update requests.
             </p>
           </div>
         </section>
@@ -295,9 +295,6 @@ export default function Home() {
           <h2 className="text-black text-2xl lg:text-4xl font-extrabold mb-7 flex items-center ">
             Driven by excellence, fueled by passion
           </h2>
-          {/* <div className = 'flex text-2xl lg:text-4xl font-extrabold mb-7 gap-2'>
-            <h1 className = 'text-black'>Driven by</h1><h1 className = 'text-primary-blue'>excellence,</h1><h1 className = 'text-black'>fueled by </h1><h1 className = 'text-primary-blue'>passion</h1>
-          </div> */}
 
           <p className="text-black mt-12">
             Nexieon is a software agency focused on delivering what our partners
