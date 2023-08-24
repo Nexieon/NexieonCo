@@ -34,14 +34,11 @@ const Work = () => {
   return (
     <div className="bg-darkmode-gray">
       <div
-        className="flex h-[76vh] justify-center items-center flex-col bg-cover object-fill"
+        className="flex h-[76vh] justify-center items-center flex-col "
         style={{
           backgroundImage: "url(./space.jpg)",
-          backgroundPosition: "center",
-          backgroundAttachment: "fixed",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          objectFit: "cover",
         }}
       >
         <h2 className="md:w-[55%] fadeInAnim text-5xl font-semibold">
