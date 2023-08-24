@@ -34,10 +34,9 @@ const Work = () => {
   return (
     <div className="bg-darkmode-gray">
       <div
-        className="flex h-[76vh] justify-center items-center flex-col"
+        className="flex h-[76vh] justify-center items-center flex-col bg-cover object-fill"
         style={{
-          background:
-            "linear-gradient(180deg, rgba(25,25,25,0.6) 0%, rgba(255,255,255,0) 100%), url(./space.jpg)",
+          backgroundImage: "url(./space.jpg)",
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
           backgroundSize: "cover",

@@ -7,9 +7,9 @@ const About = () => {
 
   return (
     <>
-      <section className="h-[76vh] bg-black flex md:justify-center items-center p-8 " 
+      <section className="h-[76vh] bg-black flex md:justify-center items-center p-8 bg-cover object-fill" 
         style={{
-          background: 'linear-gradient(180deg, rgba(25,25,25,0.6) 0%, rgba(255,255,255,0) 100%), url(./mountainsea.jpg)', 
+          backgroundImage: 'url(./mountainsea.jpg)', 
           backgroundPosition: 'center', backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', objectFit: 'cover'
         }}
       >
