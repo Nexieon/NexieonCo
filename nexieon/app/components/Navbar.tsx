@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import { FaBars, FaTimes } from "react-icons/fa";
 
@@ -12,7 +12,7 @@ export default function Navbar() {
   return (
     <>
       <div
-        className={`top-0 w-full p-3 lg:p-3 absolute lg:bg-transparent bg-white z-20`}
+        className={`top-0 w-full p-3 lg:p-3 fixed sm:absolute lg:bg-transparent bg-white z-20`}
       >
         <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between xl:mx-auto">
           <Link
