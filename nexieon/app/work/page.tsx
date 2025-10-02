@@ -39,6 +39,7 @@ const Work = () => {
           backgroundImage: "url(./space.jpg)",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
+          backgroundPosition: 'center', backgroundAttachment: 'fixed', objectFit: 'cover'
         }}
       >
         <h2 className="md:w-[55%] fadeInAnim text-5xl font-semibold">

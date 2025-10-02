@@ -84,7 +84,7 @@ export default function Footer() {
                 style={{ borderTop: "var(--primary) 2px solid", width: "75vw" }}
               />
               <p className="lg:text-left text-left text-sm py-8">
-                Copyright Nexieon - 2023
+                Offical Showcase of Nexieon Co. - 2025
               </p>
             </div>
             <div className="my-[5rem] flex items-center"></div>
